@@ -1,5 +1,5 @@
 {
-  "name": "ts-startup",
+  "name": "lte-web-backend",
   "version": "1.0.0",
   "description": "This is the JavaScript Backend SDK for Lat Twae Education website. The response of the functions are sanitised and ready to use.",
   "main": "/dist/index.js",
