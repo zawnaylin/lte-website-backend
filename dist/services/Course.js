@@ -12,9 +12,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getIgcseCourses = exports.getEveryoneCourses = exports.getYouthCourses = exports.getJuniorCourses = exports.getCoursesCount = exports.getStudentCounts = void 0;
-const Course_1 = require("../types/Course");
+exports.getIgcseCourses = exports.getEveryoneCourses = exports.getYouthCourses = exports.getJuniorCourses = exports.getCoursesCount = exports.getStudentCounts = exports.ClassCategory = void 0;
 const Setup_1 = __importDefault(require("./Setup"));
+var ClassCategory;
+(function (ClassCategory) {
+    ClassCategory["Junior"] = "Junior";
+    ClassCategory["Youth"] = "Youth";
+    ClassCategory["Everyone"] = "Everyone";
+    ClassCategory["IGCSE"] = "IGCSE";
+})(ClassCategory = exports.ClassCategory || (exports.ClassCategory = {}));
 const getStudentCounts = () => __awaiter(void 0, void 0, void 0, function* () {
     const { items } = yield Setup_1.default.getEntries({
         content_type: 'course',
@@ -40,22 +46,22 @@ const getCourses = (isHomePage, category) => __awaiter(void 0, void 0, void 0, f
     return items;
 });
 const getJuniorCourses = (isHomePage) => __awaiter(void 0, void 0, void 0, function* () {
-    const items = yield getCourses(isHomePage, Course_1.ClassCategory.Junior);
+    const items = yield getCourses(isHomePage, ClassCategory.Junior);
     return items.map((item) => item.fields.name);
 });
 exports.getJuniorCourses = getJuniorCourses;
 const getYouthCourses = (isHomePage) => __awaiter(void 0, void 0, void 0, function* () {
-    const items = yield getCourses(isHomePage, Course_1.ClassCategory.Youth);
+    const items = yield getCourses(isHomePage, ClassCategory.Youth);
     return items.map((item) => item.fields.name);
 });
 exports.getYouthCourses = getYouthCourses;
 const getEveryoneCourses = (isHomePage) => __awaiter(void 0, void 0, void 0, function* () {
-    const items = yield getCourses(isHomePage, Course_1.ClassCategory.Everyone);
+    const items = yield getCourses(isHomePage, ClassCategory.Everyone);
     return items.map((item) => item.fields.name);
 });
 exports.getEveryoneCourses = getEveryoneCourses;
 const getIgcseCourses = (isHomePage) => __awaiter(void 0, void 0, void 0, function* () {
-    const items = yield getCourses(isHomePage, Course_1.ClassCategory.IGCSE);
+    const items = yield getCourses(isHomePage, ClassCategory.IGCSE);
     return items.map((item) => item.fields.name);
 });
 exports.getIgcseCourses = getIgcseCourses;
