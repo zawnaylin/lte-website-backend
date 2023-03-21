@@ -27,6 +27,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/extensions': 'off',
     'import/no-unresolved': 'error',
+    'import/prefer-default-export': 'off',
+    'import/first': 'off',
     'no-console': 'off',
     'import/order': [
       'error',

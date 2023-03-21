@@ -2,9 +2,9 @@
   "name": "lte-web-backend",
   "version": "1.0.0",
   "description": "This is the JavaScript Backend SDK for Lat Twae Education website. The response of the functions are sanitised and ready to use.",
-  "main": "/dist/index.js",
+  "main": "dist/index.js",
   "files": [
-    "dist", 
+    "dist",
     "src"
   ],
   "scripts": {
@@ -13,7 +13,8 @@
     "build": "tsc -p tsconfig.prod.json",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "lint": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +40,6 @@
   },
   "dependencies": {
     "contentful": "^9.3.5",
-    "dotenv-safe": "^8.2.0"
+    "dotenv": "^16.0.3"
   }
 }

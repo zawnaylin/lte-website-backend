@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getIgcseCourses = exports.getEveryoneCourses = exports.getYouthCourses = exports.getJuniorCourses = exports.getCoursesCount = exports.getStudentCounts = void 0;
-const Course_1 = require("@src/types/Course");
+const Course_1 = require("../types/Course");
 const Setup_1 = __importDefault(require("./Setup"));
 const getStudentCounts = () => __awaiter(void 0, void 0, void 0, function* () {
     const { items } = yield Setup_1.default.getEntries({

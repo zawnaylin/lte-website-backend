@@ -1,4 +1,4 @@
-import { BaseCourse, CourseDetail, ClassCategory } from '@src/types/Course';
+import { BaseCourse, CourseDetail, ClassCategory } from '../types/Course';
 import client from './Setup';
 
 export const getStudentCounts = async () => {

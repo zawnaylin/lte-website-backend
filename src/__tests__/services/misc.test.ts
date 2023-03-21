@@ -1,10 +1,10 @@
 // eslint-disable-next-line import/order
-import dotenv from 'dotenv-safe';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
 // eslint-disable-next-line import/first
-import * as misc from '@src/services/misc';
+import * as misc from 'src/services/misc';
 
 describe('Miscellanous Tests', () => {
   describe('Member Counts Test', () => {

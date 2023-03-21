@@ -1,10 +1,10 @@
 // eslint-disable-next-line import/order
-import dotenv from 'dotenv-safe';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
 // eslint-disable-next-line import/first
-import * as course from '@src/services/Course';
+import * as course from 'src/services/Course';
 
 describe('Course related tests', () => {
   describe('getStudentsCount Test', () => {
@@ -50,7 +50,7 @@ describe('Course related tests', () => {
       });
     });
 
-    describe('for detail page', () => { });
+    describe('for detail page', () => {});
   });
   // ----------------------------------------------------------- //
   describe('getYouthCourse tests', () => {
@@ -72,7 +72,7 @@ describe('Course related tests', () => {
       });
     });
 
-    describe('for detail page', () => { });
+    describe('for detail page', () => {});
   });
 
   // ----------------------------------------------------------- //
@@ -95,7 +95,7 @@ describe('Course related tests', () => {
       });
     });
 
-    describe('for detail page', () => { });
+    describe('for detail page', () => {});
 
     // ----------------------------------------------------------- //
     describe('getIgcseCourse tests', () => {
@@ -117,7 +117,7 @@ describe('Course related tests', () => {
         });
       });
 
-      describe('for detail page', () => { });
+      describe('for detail page', () => {});
     });
   });
 });

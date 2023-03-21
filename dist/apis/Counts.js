@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getCourses = exports.getAllCounts = void 0;
-const Course_1 = require("@src/services/Course");
+exports.getAllCounts = void 0;
+const Course_1 = require("../services/Course");
 const misc_1 = require("../services/misc");
 const getAllCounts = () => __awaiter(void 0, void 0, void 0, function* () {
     const coursesCount = yield (0, Course_1.getCoursesCount)();
@@ -23,17 +23,3 @@ const getAllCounts = () => __awaiter(void 0, void 0, void 0, function* () {
     };
 });
 exports.getAllCounts = getAllCounts;
-const getCourses = () => __awaiter(void 0, void 0, void 0, function* () {
-    const isHomePage = true;
-    const juniorCourses = yield (0, Course_1.getJuniorCourses)(isHomePage);
-    const youthCourses = yield (0, Course_1.getYouthCourses)(isHomePage);
-    const everyoneCourses = yield (0, Course_1.getEveryoneCourses)(isHomePage);
-    const igcseCourses = yield (0, Course_1.getIgcseCourses)(isHomePage);
-    return {
-        juniorCourses,
-        youthCourses,
-        everyoneCourses,
-        igcseCourses,
-    };
-});
-exports.getCourses = getCourses;
